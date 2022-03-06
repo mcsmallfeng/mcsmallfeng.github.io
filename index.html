@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<button ng-click="toggle()">点击</button>
+	<p id="num"></p>
+	
+<script>		
+$(function(){
+	var num=1;
+	$('buttom').click(function(){
+		$('#num').text(num++);
+		
+		
+	})
+	
+})
+	</script>
+	
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+var submitml=0;  //（设置变量，初始为0）
+$scope.toggle = function() {
+submitml++;    //（当点击一次按钮，自加一）
+if(submitml<1)
+{
+alert(submitml)
+}else
+{
+window.open("http://baidu.com",target="xxx");
+}
+};
+});
+	
+	
+	//****************************************************************
+	
+	
+
+	
+	
+	
+	
+</script>
+
+</body>
+</html>
